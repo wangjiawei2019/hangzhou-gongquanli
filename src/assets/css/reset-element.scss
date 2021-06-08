@@ -1,0 +1,95 @@
+.el-table,
+.el-table__expanded-cell {
+  margin-top: 36px;
+  background-color: transparent !important;
+}
+// .el-table--striped .el-table__body tr.el-table__row--striped td {
+//   background: rgba(113, 205, 249, 0.1) !important;
+// }
+//透明化行、单元格
+.el-table th,
+.el-table tr,
+.el-table td {
+  background-color: transparent !important;
+  font-size: 26px;
+  color: #fff;
+}
+
+//hover时样式
+.el-table tbody tr:hover > td {
+  background-color: transparent !important;
+}
+
+//偶数行样式
+.el-table__row--striped td {
+  background-color: transparent !important;
+}
+
+//奇数行样式
+.el-table__row:not(.el-table__row--striped) {
+  background: transparent !important;
+}
+
+.el-table__row:not(.el-table__row--striped).blue-row {
+  background: rgba(113, 205, 249, 0.1) !important;
+}
+
+.el-table td,
+.el-table th.is-leaf {
+  background: transparent !important;
+  border: 0;
+}
+
+.el-table::before {
+  height: 0 !important;
+}
+
+.el-pagination {
+  .el-pagination__total {
+    font-size: 24px;
+    color: #009cff;
+    line-height: 65px;
+  }
+  .btn-prev,
+  .btn-next {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+    border: 1px solid #00adfd;
+    .el-icon {
+      color: #00adfd;
+    }
+  }
+  .el-pager {
+    li {
+      width: 50px;
+      height: 50px;
+      background-color: transparent !important;
+      border: 1px solid #00adfd !important;
+      color: #00adfd !important;
+      line-height: 50px;
+      font-size: 24px;
+      text-align: center;
+    }
+    li.active {
+      background-color: #00adfd !important;
+      color: #fff !important;
+    }
+  }
+}
+
+.el-date-editor--year {
+  .el-input__inner {
+    background-color: transparent;
+    font-size: 26px;
+    color: #fff;
+    border: none;
+    padding-left: 40px;
+  }
+  .el-input__prefix {
+    font-size: 20px;
+  }
+}
