@@ -6,9 +6,7 @@
 -->
 <template>
   <section class="sign">
-    <section class="bar"></section>
     <section class="title">{{ title }}</section>
-    <slot name="money"></slot>
   </section>
 </template>
 
@@ -24,23 +22,15 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .sign {
-  margin: 60px 0 0 60px;
-  display: flex;
-  align-items: center;
-  .bar {
-    width: 8px;
-    height: 33px;
-    background: rgba(48, 153, 242, 1);
-    margin-right: 20px;
-  }
+  width: 187px;
+  height: 35px;
+  background: url("@/assets/images/sign-bg.png") no-repeat center/100% 100%;
+  margin: 12px 0 0 28px;
   .title {
-    /*width: 178px;*/
-    /*height: 31px;*/
-    font-size: 38px;
+    font-size: 20px;
     font-family: pfBlod;
-    /*font-weight: bold;*/
-    color: #ffffff;
-    // line-height: 56px;
+    font-weight: bold;
+    color: #95cfff;
   }
 }
 </style>

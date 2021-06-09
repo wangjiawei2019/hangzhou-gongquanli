@@ -8,16 +8,17 @@ const formatTime = () => {
   const date = new Date()
   const H = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
   const M = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
-  const W = [
-    '星期日',
-    '星期一',
-    '星期二',
-    '星期三',
-    '星期四',
-    '星期五',
-    '星期六',
-  ][date.getDay()]
-  return `${H}:${M} ${W}`
+  // const W = [
+  //   '星期日',
+  //   '星期一',
+  //   '星期二',
+  //   '星期三',
+  //   '星期四',
+  //   '星期五',
+  //   '星期六',
+  // ][date.getDay()]
+  // return `${H}:${M} ${W}`
+  return `${H}:${M}`
 }
 
 export default formatTime

@@ -8,7 +8,7 @@
 import { reactive } from 'vue'
 
 const store = reactive({
-  year: 2021,
+  year: '2021.06.08',
   gcslqk: {
     gkztb: '',
     qtxs: '',

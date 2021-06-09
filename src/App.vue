@@ -17,9 +17,9 @@
       <div class="flex-1">
         <router-view></router-view>
       </div>
-      <footer class="footer relative w-full bg-footer-bg bg-center bg-no-repeat" v-if="show">
+      <!-- <footer class="footer relative w-full bg-footer-bg bg-center bg-no-repeat" v-if="show">
         <footer-bar></footer-bar>
-      </footer>
+      </footer> -->
     </div>
   </div>
 </template>
@@ -38,16 +38,16 @@ export default defineComponent({
     const scale = ref(1) // 初始缩放值
     const rootBox = ref<HTMLDivElement>(null)
 
-    const initWidth = 5120
-    const initHeight = 1972
+    const initWidth = 1919
+    const initHeight = 1080
     const getScale = () => {
       const ww = window.innerWidth / initWidth
       const wh = window.innerHeight / initHeight
       return ww < wh ? ww : wh
     }
     const setScale = () => {
-      // scale.value = getScale()
-      // rootBox.value?.style.setProperty('--scale', String(scale.value))
+      scale.value = getScale()
+      rootBox.value?.style.setProperty('--scale', String(scale.value))
     }
 
     const throttledResize = useThrottleFn(() => {
@@ -63,21 +63,21 @@ export default defineComponent({
       window.removeEventListener('resize', throttledResize)
     })
 
-    const route = useRoute()
-    const show = ref(true)
-    watch(
-      () => route.params.tabName,
-      (newVal) => {
-        newVal === '首页' || newVal === '村级工程'
-          ? (show.value = true)
-          : (show.value = false)
-      }
-    )
+    // const route = useRoute()
+    // const show = ref(true)
+    // watch(
+    //   () => route.params.tabName,
+    //   (newVal) => {
+    //     newVal === '首页' || newVal === '村级工程'
+    //       ? (show.value = true)
+    //       : (show.value = false)
+    //   }
+    // )
 
     return {
       scale,
       rootBox,
-      show,
+      // show,
     }
   },
 })
@@ -85,8 +85,8 @@ export default defineComponent({
 
 <style lang="scss">
 .root-box {
-  width: 5120px;
-  height: 1972px;
+  width: 1919px;
+  height: 1080px;
   transform-origin: 0 0;
   position: absolute;
   left: 50%;
@@ -94,18 +94,20 @@ export default defineComponent({
   transition: 0.3s;
   z-index: 2;
   .header {
-    height: 230px;
-    padding: 0 54px;
+    height: 123px;
+    // padding: 0 54px;
   }
   .section {
-    height: 1642px;
-    padding: 0 54px;
+    height: 610px;
     &-item {
-      width: 1876px;
+      width: 470px;
+      border: 1px solid;
+      border-image: linear-gradient(0deg, #225d73, #2c86a8) 10 10;
+      background: linear-gradient(180deg, rgba(12, 62, 84, 0.6) 0%);
     }
     &-map {
-      width: 1821px;
-      height: 1499px;
+      width: 911px;
+      height: 656px;
       top: 110px;
     }
   }
