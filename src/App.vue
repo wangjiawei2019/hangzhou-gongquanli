@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-05-28 14:14:06
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-07 18:16:13
+ * @LastEditTime: 2021-06-09 14:56:07
  * @FilePath: /hangzhou-gongquanli/src/App.vue
 -->
 <template>
@@ -17,23 +17,18 @@
       <div class="flex-1">
         <router-view></router-view>
       </div>
-      <!-- <footer class="footer relative w-full bg-footer-bg bg-center bg-no-repeat" v-if="show">
-        <footer-bar></footer-bar>
-      </footer> -->
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import NavHeader from '@/components/header/index.vue'
-import FooterBar from '@/components/footer/index.vue'
 import { useThrottleFn } from '@vueuse/core'
 
 export default defineComponent({
   name: 'App',
-  components: { NavHeader, FooterBar },
+  components: { NavHeader },
   setup() {
     const scale = ref(1) // 初始缩放值
     const rootBox = ref<HTMLDivElement>(null)
@@ -63,21 +58,9 @@ export default defineComponent({
       window.removeEventListener('resize', throttledResize)
     })
 
-    // const route = useRoute()
-    // const show = ref(true)
-    // watch(
-    //   () => route.params.tabName,
-    //   (newVal) => {
-    //     newVal === '首页' || newVal === '村级工程'
-    //       ? (show.value = true)
-    //       : (show.value = false)
-    //   }
-    // )
-
     return {
       scale,
       rootBox,
-      // show,
     }
   },
 })

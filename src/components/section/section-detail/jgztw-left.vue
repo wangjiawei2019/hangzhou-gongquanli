@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
- * @LastEditors: chenjing
- * @LastEditTime: 2021-06-08 10:32:19
+ * @LastEditors: wangjiawei
+ * @LastEditTime: 2021-06-09 14:57:59
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jgztw-left.vue
 -->
 
@@ -11,8 +11,14 @@
     <div class="jgztw-left-1">
       <bar title="预警模型情况"></bar>
       <div class="jgztw-left-1-content flex">
-        <p class="flex items-center">已梳理模型<span>213</span>个</p>
-        <p class="flex items-center">已使用模型<span>132</span>个</p>
+        <p class="flex items-center">
+          已梳理模型
+          <span>213</span>个
+        </p>
+        <p class="flex items-center">
+          已使用模型
+          <span>132</span>个
+        </p>
       </div>
       <p>高质量模型</p>
       <el-table
@@ -44,8 +50,7 @@
           <div>
             <p class="name">{{ item.name }}</p>
             <p>
-              <span>{{ item.num }}</span
-              >个
+              <span>{{ item.num }}</span>个
             </p>
           </div>
         </li>
@@ -216,15 +221,18 @@ export default defineComponent({
     onMounted(() => {
       const pieEchart1 = echarts.init(pieRef1.value)
 
-    //   initPie(pieEchart1)
+      //   initPie(pieEchart1)
     })
+
+    const tableRowClassName = () => {}
 
     return {
       tableHeader,
       tableData,
       departs,
       objects,
-      pieRef1
+      pieRef1,
+      tableRowClassName,
     }
   },
 })
@@ -308,9 +316,9 @@ export default defineComponent({
 }
 .jgztw-left-4 {
   padding: 17px 31px 0 27px;
-  .pie{
-      width: 470px;
-      height: 153px;
+  .pie {
+    width: 470px;
+    height: 153px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-06-01 16:20:51
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-07 14:26:06
+ * @LastEditTime: 2021-06-09 14:58:29
  * @FilePath: /hangzhou-gongquanli/src/router/index.ts
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -9,12 +9,8 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      path: '/:tabName',
+      path: '/',
       name: 'Home',
-      component: () => import('@/views/Home.vue'),
-    },
-    {
-      path: '/:pathMatch(.*)*',
       component: () => import('@/views/Home.vue'),
     },
   ],

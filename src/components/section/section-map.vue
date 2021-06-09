@@ -301,7 +301,7 @@ export default defineComponent({
   position: absolute;
   width: 286px;
   height: 286px;
-  background-image: url('../../assets/images/data-1.png');
+
   background-size: 100% 100%;
   left: 100px;
   top: 250px;
@@ -334,7 +334,7 @@ export default defineComponent({
 .total-item3 {
   left: 1400px;
   top: 600px;
-  background-image: url('../../assets/images/data-2.png');
+
   .number {
     background: linear-gradient(0deg, #f2dd30 0%, #ffffff 88.0859375%);
     -webkit-background-clip: text;

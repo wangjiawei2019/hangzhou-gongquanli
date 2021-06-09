@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-01-16 21:20:47
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-02 17:02:21
+ * @LastEditTime: 2021-06-09 14:54:01
  * @FilePath: /hangzhou-gongquanli/tailwind.config.js
  */
 
@@ -34,18 +34,7 @@ module.exports = {
         96: '24rem',
         128: '32rem',
       },
-      backgroundImage: {
-        'item-1': "url('/src/assets/images/item-1.png')",
-        'item-2': "url('/src/assets/images/item-2.png')",
-        'item-3': "url('/src/assets/images/item-3.png')",
-        'item-4': "url('/src/assets/images/item-4.png')",
-        'header-bg': "url('/src/assets/images/header-bg.png')",
-        'footer-bg': "url('/src/assets/images/footer-bg.png')",
-        'section-bg-left': "url('/src/assets/images/section-bg-left.png')",
-        'map-bg': "url('/src/assets/images/map-bg.png')",
-        'section-bg-right': "url('/src/assets/images/section-bg-right.png')",
-        'detail-bg': "url('/src/assets/images/detail-bg.png')",
-      },
+      backgroundImage: {},
       backgroundSize: {
         auto: 'auto',
         cover: 'cover',
