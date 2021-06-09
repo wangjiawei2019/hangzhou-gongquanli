@@ -52,6 +52,8 @@ export default defineComponent({
       span {
         color: #fff;
         font-size: 18px;
+        font-weight: bold;
+        margin-right: 7px;
       }
     }
   }

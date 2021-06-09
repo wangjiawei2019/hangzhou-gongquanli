@@ -23,16 +23,16 @@
         <p class="total">投诉总量<span>43233</span></p>
         <div class="item">
           <div class="color"></div>
-          <div>
+          <div class="var">
             <p class="text">纪委处理</p>
             <p class="num">3424</p>
           </div>
         </div>
         <div class="item">
-          <div class="color"></div>
-          <div>
-            <p class="text">纪委处理</p>
-            <p class="num">3424</p>
+          <div class="color" style="backgroundColor: #1793e6;"></div>
+          <div class="var">
+            <p class="text">业务部门处理</p>
+            <p class="num">40120</p>
           </div>
         </div>
       </div>
@@ -122,7 +122,9 @@ export default defineComponent({
         height: 11px;
         padding: 2px;
         border: 1px solid #677179;
-        margin-right: 2px;
+        margin-right: 6px;
+        background-color: #17e69a;
+        margin-top: 3px;
       }
 
       .text {
@@ -133,12 +135,7 @@ export default defineComponent({
         color: #fff;
         font-size: 14px;
         margin-top: 6px;
-      }
-      &:first-child .color {
-        background-color: #17e69a;
-      }
-      &:nth-child(2) .color {
-        background-color: #1793e6;
+        font-weight: bold;
       }
     }
   }
@@ -151,7 +148,7 @@ export default defineComponent({
   padding: 7px 6px;
   display: flex;
   flex-direction: row;
-  font-size: 12px;
+  font-size: 8px;
   color: #fff;
   .green {
     background-color: #17e69a;
