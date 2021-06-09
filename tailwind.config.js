@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-01-16 21:20:47
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 14:54:01
+ * @LastEditTime: 2021-06-09 15:44:41
  * @FilePath: /hangzhou-gongquanli/tailwind.config.js
  */
 
@@ -34,7 +34,11 @@ module.exports = {
         96: '24rem',
         128: '32rem',
       },
-      backgroundImage: {},
+      backgroundImage: {
+        'header-bg': "url('@/assets/images/top bar.png')",
+        bg: "url('@/assets/images/bg.png')",
+        'sign-col': "url('@/assets/images/sign-col.png')",
+      },
       backgroundSize: {
         auto: 'auto',
         cover: 'cover',

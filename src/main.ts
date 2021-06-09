@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-05-28 14:14:06
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-04 22:39:24
+ * @LastEditTime: 2021-06-09 16:06:52
  * @FilePath: /hangzhou-gongquanli/src/main.ts
  */
 import { createApp } from 'vue'
@@ -11,7 +11,7 @@ import './assets/css/reset-element.scss'
 
 import App from './App.vue'
 import router from '@/router'
-import './font.css'
+import './assets/css/font.css'
 import 'animate.css'
 import {
   ElTable,

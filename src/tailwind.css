@@ -5,4 +5,7 @@
 @import 'tailwindcss/utilities';
 
 @layer components {
+  .pangmen {
+    font-family: 'pangmen';
+  }
 }

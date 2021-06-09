@@ -1,12 +1,12 @@
 <!--
  * @Date: 2021-05-28 14:14:06
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 14:56:07
+ * @LastEditTime: 2021-06-09 15:19:06
  * @FilePath: /hangzhou-gongquanli/src/App.vue
 -->
 <template>
   <div
-    class="root-box"
+    class="root-box bg-bg bg-no-repeat bg-cover"
     ref="rootBox"
     :style="{ transform: 'scale(' + scale + ') translate(-50%, -50%)' }"
   >
@@ -76,6 +76,7 @@ export default defineComponent({
   top: 50%;
   transition: 0.3s;
   z-index: 2;
+
   .header {
     height: 123px;
     // padding: 0 54px;

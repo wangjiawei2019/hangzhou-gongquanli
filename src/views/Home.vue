@@ -1,19 +1,19 @@
 <!--
  * @Date: 2021-06-01 16:25:46
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-07 18:09:14
+ * @LastEditTime: 2021-06-09 15:23:24
  * @FilePath: /hangzhou-gongquanli/src/views/Home.vue
 -->
 <template>
   <section class="section relative w-full flex-col justify-between box-border">
     <div class="top w-full">
-      <div class="section-item h-full bg-cover">
+      <div class="h-full bg-cover">
         <jgztw-left></jgztw-left>
       </div>
       <div class="section-map h-full">
         <!-- <section-map></section-map> -->
       </div>
-      <div class="section-item h-full bg-cover">
+      <div class="h-full bg-cover">
         <qlyxjd-right></qlyxjd-right>
       </div>
     </div>
@@ -29,8 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { defineComponent } from 'vue'
 
 import JgztwLeft from '@/components/section/section-detail/jgztw-left.vue'
 import QlyxjdRight from '@/components/section/section-detail/qlyxjd-right.vue'

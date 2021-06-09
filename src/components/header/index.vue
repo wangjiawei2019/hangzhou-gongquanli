@@ -1,26 +1,17 @@
 <!--
  * @Date: 2021-05-28 19:48:49
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-08 10:36:14
+ * @LastEditTime: 2021-06-09 15:16:02
  * @FilePath: /hangzhou-gongquanli/src/components/header/index.vue
 -->
 <template>
   <nav
-    class="
-      nav
-      w-full
-      h-full
-      bg-header-bg bg-cover bg-no-repeat bg-center
-      flex
-      items-center
-      relative
-    "
+    class="nav w-full h-full bg-header-bg bg-cover bg-no-repeat bg-center flex items-center relative"
   >
-    <h1 class="title font-semibold text-white absolute">
-      杭州基层小微权力大数据监督平台
-    </h1>
+    <h1 class="title font-semibold text-white absolute">杭州基层小微权力大数据监督平台</h1>
     <p class="time flex items-center absolute">
-      {{ time }}<span class="date">{{ year }}</span>
+      {{ time }}
+      <span class="date">{{ year }}</span>
     </p>
   </nav>
 </template>
@@ -63,6 +54,7 @@ export default defineComponent({
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 38px;
+    // background-image: url('../../assets/images/top bar.png');
     background: linear-gradient(0deg, #3099f2 0%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
