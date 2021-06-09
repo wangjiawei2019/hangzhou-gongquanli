@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 14:57:59
+ * @LastEditTime: 2021-06-09 17:32:43
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jgztw-left.vue
 -->
 
@@ -13,11 +13,11 @@
       <div class="jgztw-left-1-content flex">
         <p class="flex items-center">
           已梳理模型
-          <span>213</span>个
+          <span class="pangmen">213</span>个
         </p>
         <p class="flex items-center">
           已使用模型
-          <span>132</span>个
+          <span class="pangmen">132</span>个
         </p>
       </div>
       <p>高质量模型</p>
@@ -45,12 +45,12 @@
     <div class="jgztw-left-2">
       <bar title="监督单位和部门"></bar>
       <ul class="jgztw-left-2-content w-full">
-        <li v-for="item in departs" :key="item.name" class="item flex-row">
+        <li v-for="item in departs" :key="item.name" class="item">
           <dot color="#17E69A"></dot>
           <div>
             <p class="name">{{ item.name }}</p>
             <p>
-              <span>{{ item.num }}</span>个
+              <span class="pangmen">{{ item.num }}</span>个
             </p>
           </div>
         </li>
@@ -59,12 +59,12 @@
     <div class="jgztw-left-2 jgztw-left-3">
       <bar title="监督对象"></bar>
       <ul class="jgztw-left-2-content w-full">
-        <li v-for="item in objects" :key="item.name" class="item flex-row">
+        <li v-for="item in objects" :key="item.name" class="item">
           <dot color="#7ABCFE"></dot>
           <div>
             <p class="name">{{ item.name }}</p>
             <p>
-              <span>{{ item.num }}</span>
+              <span class="pangmen">{{ item.num }}</span>
             </p>
           </div>
         </li>
@@ -72,7 +72,7 @@
     </div>
     <div class="jgztw-left-4">
       <bar title="监督权力项（重点领域）"></bar>
-      <div ref="pieRef1" class="pie w-full h-full"></div>
+      <div ref="pieRef" class="pie w-full h-full"></div>
     </div>
   </div>
 </template>
@@ -145,83 +145,143 @@ export default defineComponent({
         num: 1382,
       },
     ]
-    const pieRef1 = ref<HTMLDivElement>()
+    const pieRef = ref<HTMLDivElement>()
 
     const initPie = (pieEchart) => {
-      const echartData = [
+      let title = '许可类'
+      let color = [
+        '#ECF8FC',
+        '#1793E6',
+        '#163FD7',
+        '#E6C117',
+        '#17E69A',
+        '#45F2F8',
+      ]
+      let echartData = [
         {
-          value: 21,
-          name: '转账',
+          name: '公章审批',
+          value: 3,
         },
         {
-          value: 38,
-          name: '现金',
+          name: '工程审批',
+          value: 3,
         },
         {
-          value: 35,
-          name: '其他',
+          name: '务工审批',
+          value: 12,
+        },
+        {
+          name: '三资审批',
+          value: 5,
+        },
+        {
+          name: '采购审批',
+          value: 32,
+        },
+        {
+          name: '补贴审批',
+          value: 31,
         },
       ]
-      const colors = ['#3099F2', '#FEDB48', '#46EED4']
-      const rich = {
-        white: {
-          color: '#fff',
-          align: 'center',
-          fontSize: 30,
-          padding: [8, 0],
-        },
-      }
 
+      let formatNumber = function (num) {
+        let reg = /(?=(\B)(\d{3})+$)/g
+        return num.toString().replace(reg, ',')
+      }
+      let total = echartData.reduce((a, b) => {
+        return a + b.value
+      }, 0)
       const options = {
-        legend: {
-          show: true,
-          right: 0,
-          orient: 'vertical',
-          textStyle: {
-            color: '#fff',
-            fontSize: 30,
+        title: [
+          {
+            text: '{name|' + title + '}\n{val|' + formatNumber(total) + '}',
+            top: 'center',
+            left: '21%',
+            textAlign: 'center',
+            textStyle: {
+              rich: {
+                name: {
+                  fontSize: 14,
+                  fontWeight: 'normal',
+                  color: '#ACB4BA',
+                  padding: [5, 0],
+                },
+                val: {
+                  fontSize: 22,
+                  fontWeight: 'bold',
+                  fontFamily: 'pangmen',
+                  color: '#fff',
+                },
+              },
+            },
           },
-        },
-        grid: {
-          right: '-10%',
-        },
+        ],
+        color,
+        legend: [
+          {
+            x: '50%',
+            y: '20%',
+            itemWidth: 14,
+            itemHeight: 14,
+            align: 'left',
+            textStyle: {
+              fontSize: 14,
+              color: '#ACB4BA',
+            },
+            data: ['公章审批', '三资审批'],
+          },
+          {
+            x: '50%',
+            y: '40%',
+            itemWidth: 14,
+            itemHeight: 14,
+            align: 'left',
+            textStyle: {
+              fontSize: 14,
+              color: '#ACB4BA',
+            },
+            data: ['工程审批', '采购审批'],
+          },
+          {
+            x: '50%',
+            y: '60%',
+            itemWidth: 14,
+            itemHeight: 14,
+            align: 'left',
+            textStyle: {
+              fontSize: 14,
+              color: '#ACB4BA',
+            },
+            data: ['务工审批', '补贴审批'],
+          },
+        ],
         series: [
           {
             type: 'pie',
-            left: '-15%',
-            radius: ['40%', '50%'],
-            color: colors,
+            left: '-20%',
+            radius: ['80%', '90%'],
+            center: ['35%', '50%'],
+            silent: true,
             label: {
-              formatter: (params) => {
-                let total = 0 //考生总数量
-                let percent = 0 //考生占比
-                echartData.forEach((value) => {
-                  total += value.value
-                })
-                percent = Number(((params.value / total) * 100).toFixed(1))
-                return '{white|' + params.name + '}\n{white|' + percent + '%}'
-              },
-              rich,
+              show: false,
             },
             labelLine: {
-              length: 24,
-              length2: 0,
-              lineStyle: {
-                color: '#4BBEFA',
-              },
+              show: false,
+            },
+            tooltip: {
+              show: false,
             },
             data: echartData,
           },
         ],
       }
-
       pieEchart.setOption(options)
     }
 
     onMounted(() => {
-      const pieEchart1 = echarts.init(pieRef1.value)
+      const pieEchart1 = echarts.init(pieRef.value)
 
-      //   initPie(pieEchart1)
+      initPie(pieEchart1)
     })
 
     const tableRowClassName = () => {}
@@ -231,7 +291,7 @@ export default defineComponent({
       tableData,
       departs,
       objects,
-      pieRef1,
+      pieRef,
       tableRowClassName,
     }
   },
@@ -240,14 +300,14 @@ export default defineComponent({
 
 <style lang="scss">
 .jgztw-left-1 {
-  padding: 17px 31px 0 27px;
+  padding: 10px 30px;
   &-content {
     width: 100%;
     p {
       height: 22px;
       font-size: 14px;
       color: #acb4ba;
-      margin: 16px 32px 14px 0;
+      margin: 6px 32px 6px 0;
       span {
         font-size: 22px;
         font-weight: bold;
@@ -275,7 +335,7 @@ export default defineComponent({
 }
 .jgztw-left-2 {
   height: 100px;
-  padding: 17px 31px 0 27px;
+  padding: 10px 30px;
   &-content {
     display: flex;
     flex-direction: row;
@@ -315,10 +375,8 @@ export default defineComponent({
   }
 }
 .jgztw-left-4 {
-  padding: 17px 31px 0 27px;
-  .pie {
-    width: 470px;
-    height: 153px;
-  }
+  width: 100%;
+  height: 100px;
+  padding: 10px 30px 0 30px;
 }
 </style>

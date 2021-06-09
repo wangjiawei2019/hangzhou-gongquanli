@@ -1,38 +1,47 @@
 <!--
  * @Date: 2021-06-07 10:41:45
- * @LastEditors: chenjing
- * @LastEditTime: 2021-06-08 10:32:19
- * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jgztw-left.vue
+ * @LastEditors: wangjiawei
+ * @LastEditTime: 2021-06-09 19:23:18
+ * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jdydt-right.vue
 -->
 
 <template>
   <div class="jdydt-right w-full">
     <sign title="监督一点通"></sign>
-    <ul class="jdydt-right-1 w-full flex">
+    <ul class="jdydt-right-1 w-full flex justify-between">
       <li>
         <div class="img"></div>
-        <p>监察联络站<span>23</span>个</p>
+        <p>
+          监察联络站
+          <span class="pangmen">23</span>个
+        </p>
       </li>
       <li>
         <div class="img"></div>
-        <p>监察联络员<span>384</span>个</p>
+        <p>
+          监察联络员
+          <span class="pangmen">384</span>个
+        </p>
       </li>
     </ul>
     <div class="jdydt-right-2 w-full h-full">
       <div class="jdydt-right-2-content">
-        <p class="total">投诉总量<span>43233</span></p>
+        <p class="total">
+          投诉总量
+          <span class="pangmen">43233</span>
+        </p>
         <div class="item">
           <div class="color"></div>
           <div class="var">
             <p class="text">纪委处理</p>
-            <p class="num">3424</p>
+            <p class="num pangmen">3424</p>
           </div>
         </div>
         <div class="item">
           <div class="color" style="backgroundColor: #1793e6;"></div>
           <div class="var">
             <p class="text">业务部门处理</p>
-            <p class="num">40120</p>
+            <p class="num pangmen">40120</p>
           </div>
         </div>
       </div>
@@ -70,7 +79,7 @@ export default defineComponent({
   li {
     display: flex;
     flex-direction: row;
-    margin-right: 20px;
+    margin-right: 10px;
     .img {
       width: 47px;
       height: 47px;
@@ -105,7 +114,7 @@ export default defineComponent({
     .total {
       color: #acb4ba;
       font-size: 14px;
-      margin-right: 88px;
+      margin-right: 60px;
       span {
         color: #fff;
         font-size: 20px;
@@ -147,8 +156,10 @@ export default defineComponent({
   margin-top: 13px;
   padding: 7px 6px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   font-size: 8px;
+  font-weight: 500;
+  font-family: 'pangmen';
   color: #fff;
   .green {
     background-color: #17e69a;

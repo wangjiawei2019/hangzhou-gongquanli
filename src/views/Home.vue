@@ -1,19 +1,19 @@
 <!--
  * @Date: 2021-06-01 16:25:46
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 15:23:24
+ * @LastEditTime: 2021-06-09 19:17:19
  * @FilePath: /hangzhou-gongquanli/src/views/Home.vue
 -->
 <template>
   <section class="section relative w-full flex-col justify-between box-border">
     <div class="top w-full">
-      <div class="h-full bg-cover">
+      <div class="section-item h-full bg-cover">
         <jgztw-left></jgztw-left>
       </div>
       <div class="section-map h-full">
-        <!-- <section-map></section-map> -->
+        <section-map></section-map>
       </div>
-      <div class="h-full bg-cover">
+      <div class="section-item h-full bg-cover">
         <qlyxjd-right></qlyxjd-right>
       </div>
     </div>

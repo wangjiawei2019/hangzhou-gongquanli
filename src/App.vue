@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-05-28 14:14:06
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 15:19:06
+ * @LastEditTime: 2021-06-09 19:20:51
  * @FilePath: /hangzhou-gongquanli/src/App.vue
 -->
 <template>
@@ -91,7 +91,7 @@ export default defineComponent({
     }
     &-map {
       width: 911px;
-      height: 656px;
+      height: 100%;
       top: 110px;
     }
   }
