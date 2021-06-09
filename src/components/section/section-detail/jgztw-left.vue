@@ -6,7 +6,7 @@
 -->
 
 <template>
-  <div class="jgztw-left w-full">
+  <div class="jgztw-left w-full h-full">
     <sign title="监督主体网"></sign>
     <div class="jgztw-left-1">
       <bar title="预警模型情况"></bar>
@@ -24,33 +24,40 @@
       <el-table
         :data="tableData"
         :header-cell-style="{
-          'text-align': 'center',
           'font-size': '14px',
-          backgroundColor: '#15394C',
           color: '#ACB4BA',
         }"
-        :cell-style="{ 'text-align': 'center', 'font-size': '14px' }"
+        :cell-style="{ 'font-size': '14px' }"
         :row-style="{ height: '14px' }"
         :row-class-name="tableRowClassName"
       >
-        <el-table-column
+        <!-- <el-table-column
           v-for="item in tableHeader"
           :prop="item.key"
           :label="item.label"
           :key="item.key"
           show-overflow-tooltip
+        ></el-table-column> -->
+        <el-table-column prop="xh" label="序号" width="59"></el-table-column>
+        <el-table-column
+          prop="mxdw"
+          label="模型单位"
+          width="80"
         ></el-table-column>
+        <el-table-column prop="mxmc" label="模型名称"></el-table-column>
+        <el-table-column prop="zhl" label="转化率" width="70"></el-table-column>
       </el-table>
     </div>
     <div class="jgztw-left-2">
       <bar title="监督单位和部门"></bar>
-      <ul class="jgztw-left-2-content w-full">
-        <li v-for="item in departs" :key="item.name" class="item">
-          <dot color="#17E69A"></dot>
+      <ul class="jgztw-left-2-content w-full flex flex-row">
+        <li v-for="item in departs" :key="item.name" class="item flex flex-row">
+          <div class="dot"></div>
           <div>
             <p class="name">{{ item.name }}</p>
             <p>
-              <span class="pangmen">{{ item.num }}</span>个
+              <span class="pangmen">{{ item.num }}</span
+              >个
             </p>
           </div>
         </li>
@@ -58,9 +65,9 @@
     </div>
     <div class="jgztw-left-2 jgztw-left-3">
       <bar title="监督对象"></bar>
-      <ul class="jgztw-left-2-content w-full">
-        <li v-for="item in objects" :key="item.name" class="item">
-          <dot color="#7ABCFE"></dot>
+      <ul class="jgztw-left-2-content w-full flex flex-row">
+        <li v-for="item in objects" :key="item.name" class="item flex flex-row">
+          <div class="dot dot-1"></div>
           <div>
             <p class="name">{{ item.name }}</p>
             <p>
@@ -72,7 +79,7 @@
     </div>
     <div class="jgztw-left-4">
       <bar title="监督权力项（重点领域）"></bar>
-      <div ref="pieRef" class="pie w-full h-full"></div>
+      <div ref="pieRef" class="pie w-full h-full" style="margintop: 5px"></div>
     </div>
   </div>
 </template>
@@ -81,13 +88,12 @@
 import { defineComponent, onMounted, ref } from 'vue'
 import Sign from '@/components/section/sign.vue'
 import Bar from '@/components/section/bar.vue'
-import Dot from '@/components/section/dot.vue'
 
 import * as echarts from 'echarts'
 
 export default defineComponent({
   name: 'jgztw-left',
-  components: { Sign, Bar, Dot },
+  components: { Sign, Bar },
   setup() {
     const tableHeader = [
       { key: 'xh', label: '序号' },
@@ -138,11 +144,11 @@ export default defineComponent({
       },
       {
         name: '村主职干部',
-        num: 2245,
+        num: 1218,
       },
       {
         name: '村干部',
-        num: 1382,
+        num: 3245,
       },
     ]
     const pieRef = ref<HTMLDivElement>()
@@ -299,84 +305,116 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.jgztw-left-1 {
-  padding: 10px 30px;
-  &-content {
-    width: 100%;
+.jgztw-left {
+  border: 1px solid;
+  border-image: linear-gradient(0deg, #225d73, #2c86a8) 10 10;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 62, 84, 0.6) 0%,
+    rgba(12, 62, 84, 0) 100%
+  );
+  .jgztw-left-1 {
+    padding: 10px 30px 5px;
+    &-content {
+      width: 100%;
+      p {
+        height: 22px;
+        font-size: 14px;
+        color: #acb4ba;
+        margin: 6px 32px 6px 0;
+        span {
+          font-size: 22px;
+          font-weight: bold;
+          margin: 0 11px;
+          color: #fff;
+        }
+      }
+    }
     p {
       height: 22px;
       font-size: 14px;
       color: #acb4ba;
-      margin: 6px 32px 6px 0;
-      span {
-        font-size: 22px;
-        font-weight: bold;
-        margin: 0 11px;
-        color: #fff;
-      }
+    }
+    .el-table,
+    .el-table__expanded-cell {
+      margin-top: 7px;
+    }
+    .el-table {
+      border: 1px solid #214d64;
+    }
+    .el-table thead {
+      background-color: #15394c;
+    }
+    .el-table td,
+    .el-table th {
+      padding: 2px 0;
     }
   }
-  p {
-    height: 22px;
-    font-size: 14px;
-    color: #acb4ba;
-  }
-  .el-table,
-  .el-table__expanded-cell {
-    margin-top: 7px;
-  }
-  .el-table {
-    border: 1px solid #214d64;
-  }
-  .el-table td,
-  .el-table th {
-    padding: 2px 0;
-  }
-}
-.jgztw-left-2 {
-  height: 100px;
-  padding: 10px 30px;
-  &-content {
-    display: flex;
-    flex-direction: row;
-    margin-top: 11px;
-    .item {
-      display: flex;
-      flex-direction: row;
-      height: 46px;
-      margin-right: 14px;
-      justify-content: flex-start;
-      p {
-        color: #acb4ba;
-        font-size: 14px;
-        span {
-          font-size: 22px;
-          color: #fff;
-          font-weight: bold;
-          margin-right: 7px;
+  .jgztw-left-2 {
+    height: 100px;
+    padding: 10px 30px;
+    &-content {
+      margin-top: 11px;
+      justify-content: space-between;
+      .dot {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #393f45;
+        border-radius: 50%;
+        margin-right: 6px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 6px;
+          height: 6px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #17e69a;
+          border-radius: 50%;
         }
       }
-      .name {
-        margin-bottom: 6px;
+      .dot-1::after {
+        background-color: #7abcfe;
+      }
+      .item {
+        height: 46px;
+        margin-right: 14px;
+        justify-content: flex-start;
+        p {
+          color: #acb4ba;
+          font-size: 14px;
+          span {
+            font-size: 22px;
+            color: #fff;
+            font-weight: bold;
+            margin-right: 7px;
+          }
+        }
+        .name {
+          margin-bottom: 6px;
+        }
       }
     }
   }
-}
-.jgztw-left-3 {
-  .jgztw-left-2-content {
-    justify-content: space-between;
-    .item {
-      flex: 1;
-      border-right: 1px solid #4b5257;
-      &:last-child {
-        border: none;
+  .jgztw-left-3 {
+    height: 110px;
+    .jgztw-left-2-content {
+      justify-content: space-between;
+      .item {
+        flex: 1;
+        border-right: 1px solid #4b5257;
+        &:last-child {
+          border: none;
+        }
       }
     }
   }
-}
-.jgztw-left-4 {
-  width: 100%;
-  height: 100px;
-  padding: 10px 30px 0 30px;
+  .jgztw-left-4 {
+    width: 100%;
+    height: 100px;
+    padding: 10px 30px 0 30px;
+  }
 }
 </style>

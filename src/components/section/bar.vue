@@ -5,9 +5,9 @@
  * @FilePath: /hangzhou-gongquanli/src/components/section/bar.vue
 -->
 <template>
-  <section class="bar">
+  <section class="bar flex flex-row items-center">
     <section class="text">{{ title }}</section>
-    <section class="line"></section>
+    <section class="line flex-1"></section>
   </section>
 </template>
 
@@ -23,19 +23,16 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .bar {
-  display: flex;
-  align-items: center;
   .text {
     font-size: 16px;
     font-family: pfBlod;
     font-weight: bold;
     color: #fff;
   }
-  .bar {
-    width: 8px;
-    height: 33px;
-    background: rgba(48, 153, 242, 1);
-    margin-right: 20px;
+  .line {
+    height: 1px;
+    background: #708089;
+    margin-left: 15px;
   }
 }
 </style>

@@ -39,6 +39,8 @@ module.exports = {
         map: "url('@/assets/images/map.png')",
         bg: "url('@/assets/images/bg.png')",
         'sign-col': "url('@/assets/images/sign-col.png')",
+        'lianluozhan': "url('@/assets/images/lianluozhan.png')",
+        'lianluoyuan': "url('@/assets/images/lianluoyuan.png')",
       },
       backgroundSize: {
         auto: 'auto',

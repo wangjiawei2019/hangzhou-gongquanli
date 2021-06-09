@@ -6,62 +6,50 @@
 -->
 
 <template>
-  <div class="qlyxjd-right w-full">
+  <div class="qlyxjd-right w-full h-full">
     <sign title="权力运行监督"></sign>
-    <div class="progressbar" ref="barRef"></div>
+    <div class="progressbar box-border" ref="barRef"></div>
     <div class="sheji-items w-full">
       <div class="sheji-item">
         <img src="~@/assets/images/shenpi.png" alt />
-        <div class="right flex-col">
+        <div class="right">
           <p>涉及审批</p>
-          <p>
-            <span class="pangmen">8567</span>次
-          </p>
+          <p><span class="pangmen">8567</span>次</p>
         </div>
       </div>
       <div class="sheji-item">
         <img src="~@/assets/images/qunzhong.png" alt />
-        <div class="right flex-col">
+        <div class="right">
           <p>涉及群众</p>
-          <p>
-            <span class="pangmen">8567</span>人
-          </p>
+          <p><span class="pangmen">8567</span>人</p>
         </div>
       </div>
       <div class="sheji-item">
         <img src="~@/assets/images/company.png" alt />
-        <div class="right flex-col">
+        <div class="right">
           <p>涉及企业</p>
-          <p>
-            <span class="pangmen">345</span>家
-          </p>
+          <p><span class="pangmen">345</span>家</p>
         </div>
       </div>
       <div class="sheji-item">
         <img src="~@/assets/images/xiangmu.png" alt />
-        <div class="right flex-col">
+        <div class="right">
           <p>涉及项目</p>
-          <p>
-            <span class="pangmen">537</span>个
-          </p>
+          <p><span class="pangmen">537</span>个</p>
         </div>
       </div>
       <div class="sheji-item">
         <img src="~@/assets/images/wuzi.png" alt />
-        <div class="right flex-col">
+        <div class="right">
           <p>涉及物资</p>
-          <p>
-            <span class="pangmen">43566</span>个
-          </p>
+          <p><span class="pangmen">43566</span>个</p>
         </div>
       </div>
       <div class="sheji-item">
         <img src="~@/assets/images/zijin.png" alt />
-        <div class="right flex-col">
+        <div class="right">
           <p>涉及资金</p>
-          <p>
-            <span class="pangmen">2,245,24</span>元
-          </p>
+          <p><span class="pangmen">2,245,24</span>元</p>
         </div>
       </div>
     </div>
@@ -237,37 +225,46 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.progressbar {
-  width: 470px;
-  height: 318px;
-  border-bottom: 1px solid #225d73;
-  padding: 24px;
-}
-.sheji-items {
-  height: 242px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 28px 20px;
-  .sheji-item {
+.qlyxjd-right {
+  border: 1px solid;
+  border-image: linear-gradient(0deg, #225d73, #2c86a8) 10 10;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 62, 84, 0.6) 0%,
+    rgba(12, 62, 84, 0) 100%
+  );
+  .progressbar {
+    width: 470px;
+    height: 318px;
+    border-bottom: 1px solid #225d73;
+    padding: 30px 24px 24px;
+  }
+  .sheji-items {
+    height: 242px;
     display: flex;
     flex-direction: row;
-    width: 50%;
-    height: 44px;
-    margin-bottom: 20px;
-    img {
-      width: 44px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 28px 20px;
+    .sheji-item {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
       height: 44px;
-      margin-right: 13px;
-    }
-    p {
-      font-size: 14px;
-      color: #acb4ba;
-      span {
-        font-size: 22px;
-        color: #fff;
-        margin-right: 8px;
+      margin-bottom: 20px;
+      img {
+        width: 44px;
+        height: 44px;
+        margin-right: 13px;
+      }
+      p {
+        font-size: 14px;
+        color: #acb4ba;
+        span {
+          font-size: 22px;
+          color: #fff;
+          margin-right: 8px;
+        }
       }
     }
   }

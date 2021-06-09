@@ -85,9 +85,6 @@ export default defineComponent({
     height: 610px;
     &-item {
       width: 470px;
-      border: 1px solid;
-      border-image: linear-gradient(0deg, #225d73, #2c86a8) 10 10;
-      background: linear-gradient(180deg, rgba(12, 62, 84, 0.6) 0%);
     }
     &-map {
       width: 911px;
