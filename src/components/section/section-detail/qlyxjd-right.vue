@@ -1,14 +1,14 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 19:24:05
+ * @LastEditTime: 2021-06-11 10:05:37
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/qlyxjd-right.vue
 -->
 
 <template>
   <div class="qlyxjd-right w-full">
     <sign title="权力运行监督"></sign>
-    <div class="progressbar" ref="barRef"></div>
+    <div class="bar" ref="barRef"></div>
     <div class="sheji-items w-full">
       <div class="sheji-item">
         <img src="~@/assets/images/shenpi.png" alt />
@@ -173,6 +173,7 @@ export default defineComponent({
               inside: false,
               color: '#fff',
               fontSize: '18',
+              fontFamily: 'pangmen',
               formatter: function (val) {
                 return `${val}k`
               },
@@ -237,7 +238,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.progressbar {
+.bar {
   width: 470px;
   height: 318px;
   border-bottom: 1px solid #225d73;
