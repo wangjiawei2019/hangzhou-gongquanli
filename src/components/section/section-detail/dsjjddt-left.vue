@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 16:32:49
+ * @LastEditTime: 2021-06-11 10:37:53
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/dsjjddt-left.vue
 -->
 
@@ -10,84 +10,63 @@
     <sign title="大数据监督动态"></sign>
     <div class="dsjjddt-left-content w-full flex-1 flex">
       <sign-col title="预警分析情况"></sign-col>
-      <ul style="margin-right: 30px; width: 250px">
+      <ul style="margin-right: 30px; width: 300px">
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">总预警数</label>
           <div class="desc pangmen">23546</div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">单位预警排行</label>
-          <div class="desc pangmen">白云村</div>
+          <div class="desc chinese">白云村</div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">监督对象预警排行</label>
-          <div class="desc pangmen">张一家</div>
+          <div class="desc chinese">张一家</div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">权力项预警排行</label>
-          <div class="desc pangmen">补贴审批</div>
+          <div class="desc chinese">补贴审批</div>
         </li>
       </ul>
       <sign-col title="发现疑似问题"></sign-col>
       <ul style="margin-right: 30px; width: 320px; margin-top: -20px">
         <li class="dsjjddt-left-content-item flex items-center">
-          <img
-            src="../../../assets/images/data.png"
-            style="margin-right: 5px"
-          />
+          <img src="../../../assets/images/data.png" style="margin-right: 5px" />
           <div>
             <label class="label">总预警数</label>
             <div class="desc">
               <span class="pangmen">12312</span>
               <span class="label">
                 条（占总数据
-                <span
-                  class="desc pangmen"
-                  style="color: #45f2f8; font-size: 18px"
-                  >0.2%</span
-                >
+                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">0.2%</span>
                 ）
               </span>
             </div>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
-          <img
-            src="../../../assets/images/money.png"
-            style="margin-right: 5px"
-          />
+          <img src="../../../assets/images/money.png" style="margin-right: 5px" />
           <div>
             <label class="label">涉及金额</label>
             <div class="desc">
               <span class="pangmen">5678</span>
               <span class="label">
                 万元（占总金额
-                <span
-                  class="desc pangmen"
-                  style="color: #45f2f8; font-size: 18px"
-                  >34%</span
-                >
+                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
                 ）
               </span>
             </div>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
-          <img
-            src="../../../assets/images/person.png"
-            style="margin-right: 5px"
-          />
+          <img src="../../../assets/images/person.png" style="margin-right: 5px" />
           <div>
             <label class="label">涉及人员</label>
             <div class="desc">
               <span class="pangmen">1222</span>
               <span class="label">
                 个（占总人数
-                <span
-                  class="desc pangmen"
-                  style="color: #45f2f8; font-size: 18px"
-                  >34%</span
-                >
+                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
                 ）
               </span>
             </div>
@@ -103,9 +82,7 @@
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
-                >34%</span
-              >
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
               ）
             </span>
           </div>
@@ -117,9 +94,7 @@
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
-                >34%</span
-              >
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
               ）
             </span>
           </div>
@@ -131,9 +106,7 @@
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
-                >34%</span
-              >
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
               ）
             </span>
           </div>
@@ -145,16 +118,14 @@
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
-                >34%</span
-              >
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
               ）
             </span>
           </div>
         </li>
       </ul>
       <sign-col title="问题核实成效"></sign-col>
-      <ul style="margin-right: 30px; width: 170px">
+      <ul style="margin-right: 30px; width: 200px">
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">查处人员</label>
           <div class="desc">
@@ -212,6 +183,8 @@ export default defineComponent({
   &-content {
     box-sizing: border-box;
     padding: 15px 30px;
+    display: flex;
+
     &-item {
       margin-bottom: 10px;
 
@@ -222,8 +195,13 @@ export default defineComponent({
       }
       .desc {
         font-size: 22px;
+        line-height: 30px;
         font-weight: 400;
         color: #ffffff;
+      }
+      .chinese {
+        font-size: 16px;
+        font-weight: bold;
       }
       .dot {
         width: 12px;

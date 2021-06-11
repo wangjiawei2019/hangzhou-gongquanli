@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-09 15:33:51
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 15:49:54
+ * @LastEditTime: 2021-06-11 10:41:27
  * @FilePath: /hangzhou-gongquanli/src/components/section/sign-col.vue
 -->
 <template>
@@ -28,5 +28,6 @@ export default defineComponent({
   font-weight: 500;
   color: #ffffff;
   background-position: right bottom;
+  line-height: 20px;
 }
 </style>

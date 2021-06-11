@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 17:32:43
+ * @LastEditTime: 2021-06-11 10:17:18
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jgztw-left.vue
 -->
 
@@ -37,13 +37,9 @@
           :label="item.label"
           :key="item.key"
           show-overflow-tooltip
-        ></el-table-column> -->
+        ></el-table-column>-->
         <el-table-column prop="xh" label="序号" width="59"></el-table-column>
-        <el-table-column
-          prop="mxdw"
-          label="模型单位"
-          width="80"
-        ></el-table-column>
+        <el-table-column prop="mxdw" label="模型单位" width="80"></el-table-column>
         <el-table-column prop="mxmc" label="模型名称"></el-table-column>
         <el-table-column prop="zhl" label="转化率" width="70"></el-table-column>
       </el-table>
@@ -56,8 +52,7 @@
           <div>
             <p class="name">{{ item.name }}</p>
             <p>
-              <span class="pangmen">{{ item.num }}</span
-              >个
+              <span class="pangmen">{{ item.num }}</span>个
             </p>
           </div>
         </li>
@@ -357,6 +352,7 @@ export default defineComponent({
       margin-top: 11px;
       justify-content: space-between;
       .dot {
+        margin-top: 5px;
         width: 12px;
         height: 12px;
         border: 1px solid #393f45;
@@ -401,12 +397,12 @@ export default defineComponent({
   .jgztw-left-3 {
     height: 110px;
     .jgztw-left-2-content {
+      align-items: center;
       justify-content: space-between;
       .item {
         flex: 1;
-        border-right: 1px solid #4b5257;
-        &:last-child {
-          border: none;
+        &:first-child {
+          border-right: 1px solid #4b5257;
         }
       }
     }
