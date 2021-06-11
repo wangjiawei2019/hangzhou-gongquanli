@@ -23,9 +23,10 @@ export default defineComponent({
 .sign-col {
   margin-right: 16px;
   width: 30px;
+  height: 165px;
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
-  background-position: right center;
+  background-position: right bottom;
 }
 </style>

@@ -10,7 +10,7 @@
     <sign title="大数据监督动态"></sign>
     <div class="dsjjddt-left-content w-full flex-1 flex">
       <sign-col title="预警分析情况"></sign-col>
-      <ul style="margin-right: 30px; width: 250px;">
+      <ul style="margin-right: 30px; width: 250px">
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">总预警数</label>
           <div class="desc pangmen">23546</div>
@@ -29,96 +29,132 @@
         </li>
       </ul>
       <sign-col title="发现疑似问题"></sign-col>
-      <ul style="margin-right: 30px; width: 320px; margin-top: -20px;">
+      <ul style="margin-right: 30px; width: 320px; margin-top: -20px">
         <li class="dsjjddt-left-content-item flex items-center">
-          <img src="../../../assets/images/data.png" style="margin-right: 5px;" />
+          <img
+            src="../../../assets/images/data.png"
+            style="margin-right: 5px"
+          />
           <div>
             <label class="label">总预警数</label>
             <div class="desc">
               <span class="pangmen">12312</span>
               <span class="label">
                 条（占总数据
-                <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">0.2%</span> ）
+                <span
+                  class="desc pangmen"
+                  style="color: #45f2f8; font-size: 18px"
+                  >0.2%</span
+                >
+                ）
               </span>
             </div>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
-          <img src="../../../assets/images/money.png" style="margin-right: 5px;" />
+          <img
+            src="../../../assets/images/money.png"
+            style="margin-right: 5px"
+          />
           <div>
             <label class="label">涉及金额</label>
             <div class="desc">
               <span class="pangmen">5678</span>
               <span class="label">
                 万元（占总金额
-                <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">34%</span> ）
+                <span
+                  class="desc pangmen"
+                  style="color: #45f2f8; font-size: 18px"
+                  >34%</span
+                >
+                ）
               </span>
             </div>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
-          <img src="../../../assets/images/person.png" style="margin-right: 5px;" />
+          <img
+            src="../../../assets/images/person.png"
+            style="margin-right: 5px"
+          />
           <div>
             <label class="label">涉及人员</label>
             <div class="desc">
               <span class="pangmen">1222</span>
               <span class="label">
                 个（占总人数
-                <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">34%</span> ）
+                <span
+                  class="desc pangmen"
+                  style="color: #45f2f8; font-size: 18px"
+                  >34%</span
+                >
+                ）
               </span>
             </div>
           </div>
         </li>
       </ul>
       <sign-col title="疑似问题处置"></sign-col>
-      <ul style="margin-right: 30px; width: 320px;">
+      <ul style="margin-right: 30px; width: 320px">
         <li class="dsjjddt-left-content-item flex items-center">
           <div class="dot"></div>
-          <label class="label" style="width: 70px;">下发数</label>
+          <label class="label" style="width: 70px">下发数</label>
           <div class="desc">
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">34%</span> ）
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
+                >34%</span
+              >
+              ）
             </span>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
           <div class="dot"></div>
-          <label class="label" style="width: 70px;">转化数</label>
+          <label class="label" style="width: 70px">转化数</label>
           <div class="desc">
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">34%</span> ）
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
+                >34%</span
+              >
+              ）
             </span>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
           <div class="dot"></div>
-          <label class="label" style="width: 70px;">反馈数</label>
+          <label class="label" style="width: 70px">反馈数</label>
           <div class="desc">
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">34%</span> ）
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
+                >34%</span
+              >
+              ）
             </span>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center">
           <div class="dot"></div>
-          <label class="label" style="width: 70px;">查实数</label>
+          <label class="label" style="width: 70px">查实数</label>
           <div class="desc">
             <span class="pangmen">1222</span>
             <span class="label">
               条（xx率
-              <span class="desc pangmen" style="color:#45F2F8;font-size:18px;">34%</span> ）
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px"
+                >34%</span
+              >
+              ）
             </span>
           </div>
         </li>
       </ul>
       <sign-col title="问题核实成效"></sign-col>
-      <ul style="margin-right: 30px; width: 170px;">
+      <ul style="margin-right: 30px; width: 170px">
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">查处人员</label>
           <div class="desc">
@@ -155,13 +191,11 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue'
 import Sign from '@/components/section/sign.vue'
-import Bar from '@/components/section/bar.vue'
-import Dot from '@/components/section/dot.vue'
 import SignCol from '@/components/section/sign-col.vue'
 
 export default defineComponent({
   name: 'dsjjddt-left',
-  components: { Sign, Bar, Dot, SignCol },
+  components: { Sign, SignCol },
   setup() {},
 })
 </script>
@@ -177,7 +211,7 @@ export default defineComponent({
   );
   &-content {
     box-sizing: border-box;
-    padding: 30px;
+    padding: 15px 30px;
     &-item {
       margin-bottom: 10px;
 

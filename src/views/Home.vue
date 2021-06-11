@@ -7,13 +7,13 @@
 <template>
   <section class="section relative w-full flex-col justify-between box-border">
     <div class="top w-full">
-      <div class="section-item h-full bg-cover">
+      <div class="section-item h-full">
         <jgztw-left></jgztw-left>
       </div>
       <div class="section-map h-full">
         <section-map></section-map>
       </div>
-      <div class="section-item h-full bg-cover">
+      <div class="section-item h-full">
         <qlyxjd-right></qlyxjd-right>
       </div>
     </div>
@@ -71,15 +71,9 @@ export default defineComponent({
   .left {
     width: 1349px;
     height: 100%;
-    border: 1px solid;
-    border-image: linear-gradient(0deg, #225d73, #2c86a8) 10 10;
-    background: linear-gradient(180deg, rgba(12, 62, 84, 0.6) 0%);
   }
   .right {
     width: 469px;
-    border: 1px solid;
-    border-image: linear-gradient(0deg, #225d73, #2c86a8) 10 10;
-    background: linear-gradient(180deg, rgba(12, 62, 84, 0.6) 0%);
     margin-left: 34px;
   }
 }
