@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-09 14:48:35
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-11 18:46:33
+ * @LastEditTime: 2021-06-11 21:03:39
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-map.vue
 -->
 <template>
@@ -96,18 +96,18 @@ export default defineComponent({
   name: 'section-map',
   setup() {
     const mapList = [
-      { name: '临平区', left: true, x: 690, y: 40 },
-      { name: '拱墅区', left: true, x: 660, y: 80 },
-      { name: '余杭区', left: true, x: 560, y: 70 },
-      { name: '钱塘区', left: true, x: 774, y: 99 },
-      { name: '上城区', left: true, x: 680, y: 110 },
-      { name: '滨江区', left: true, x: 670, y: 150 },
-      { name: '萧山区', left: true, x: 693, y: 207 },
+      { name: '临平区', left: true, x: 680, y: 40 },
+      { name: '拱墅区', left: true, x: 640, y: 80 },
+      { name: '余杭区', left: true, x: 550, y: 60 },
+      { name: '钱塘区', left: true, x: 774, y: 90 },
+      { name: '上城区', left: true, x: 660, y: 105 },
+      { name: '滨江区', left: true, x: 655, y: 130 },
+      { name: '萧山区', left: true, x: 680, y: 200 },
       { name: '西湖区', left: false, x: 560, y: 145 },
-      { name: '富阳区', left: true, x: 520, y: 230 },
-      { name: '桐庐县', left: true, x: 440, y: 300 },
+      { name: '富阳区', left: true, x: 520, y: 210 },
+      { name: '桐庐县', left: true, x: 440, y: 270 },
       { name: '临安区', left: true, x: 310, y: 160 },
-      { name: '建德市', left: true, x: 380, y: 400 },
+      { name: '建德市', left: true, x: 380, y: 380 },
       { name: '淳安县', left: true, x: 190, y: 370 },
     ]
     const mapRef = ref<HTMLDivElement>()

@@ -138,7 +138,7 @@ export default defineComponent({
         num: 13545,
       },
       {
-        name: '村书记',
+        name: '村主职干部',
         num: 1280,
       },
       {

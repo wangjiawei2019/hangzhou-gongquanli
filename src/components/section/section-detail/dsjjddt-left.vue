@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-11 12:15:29
+ * @LastEditTime: 2021-06-11 21:05:12
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/dsjjddt-left.vue
 -->
 
@@ -129,28 +129,28 @@
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">查处人员</label>
           <div class="desc">
-            <span class="pangmen">123</span>&nbsp;
+            <span class="pangmen">169</span>&nbsp;
             <span class="label">人</span>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">挽回损失</label>
           <div class="desc">
-            <span class="pangmen">1231</span>&nbsp;
+            <span class="pangmen">3590</span>&nbsp;
             <span class="label">元</span>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">问题整改</label>
           <div class="desc">
-            <span class="pangmen">1231</span>&nbsp;
+            <span class="pangmen">1411</span>&nbsp;
             <span class="label">项</span>
           </div>
         </li>
         <li class="dsjjddt-left-content-item flex items-center justify-between">
           <label class="label">避免损失</label>
           <div class="desc">
-            <span class="pangmen">123</span>&nbsp;
+            <span class="pangmen">1137</span>&nbsp;
             <span class="label">元</span>
           </div>
         </li>
