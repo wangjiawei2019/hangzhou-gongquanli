@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-11 10:11:20
+ * @LastEditTime: 2021-06-11 12:15:55
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/qlyxjd-right.vue
 -->
 
@@ -15,7 +15,7 @@
         <div class="right">
           <p>涉及审批</p>
           <p>
-            <span class="pangmen">8567</span>次
+            <span class="pangmen">3931</span>次
           </p>
         </div>
       </div>

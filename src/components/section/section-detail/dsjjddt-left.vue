@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-11 10:37:53
+ * @LastEditTime: 2021-06-11 12:15:29
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/dsjjddt-left.vue
 -->
 
@@ -52,7 +52,7 @@
               <span class="pangmen">5678</span>
               <span class="label">
                 万元（占总金额
-                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
+                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">30%</span>
                 ）
               </span>
             </div>
@@ -63,10 +63,10 @@
           <div>
             <label class="label">涉及人员</label>
             <div class="desc">
-              <span class="pangmen">1222</span>
+              <span class="pangmen">527</span>
               <span class="label">
                 个（占总人数
-                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
+                <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">13%</span>
                 ）
               </span>
             </div>
@@ -79,10 +79,10 @@
           <div class="dot"></div>
           <label class="label" style="width: 70px">下发数</label>
           <div class="desc">
-            <span class="pangmen">1222</span>
+            <span class="pangmen">611</span>
             <span class="label">
-              条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
+              条（下发率
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">95%</span>
               ）
             </span>
           </div>
@@ -91,10 +91,10 @@
           <div class="dot"></div>
           <label class="label" style="width: 70px">转化数</label>
           <div class="desc">
-            <span class="pangmen">1222</span>
+            <span class="pangmen">1639</span>
             <span class="label">
-              条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
+              条（转化率
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">65%</span>
               ）
             </span>
           </div>
@@ -103,10 +103,10 @@
           <div class="dot"></div>
           <label class="label" style="width: 70px">反馈数</label>
           <div class="desc">
-            <span class="pangmen">1222</span>
+            <span class="pangmen">771</span>
             <span class="label">
-              条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
+              条（反馈率
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">51%</span>
               ）
             </span>
           </div>
@@ -115,10 +115,10 @@
           <div class="dot"></div>
           <label class="label" style="width: 70px">查实数</label>
           <div class="desc">
-            <span class="pangmen">1222</span>
+            <span class="pangmen">145</span>
             <span class="label">
-              条（xx率
-              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">34%</span>
+              条（查实率
+              <span class="desc pangmen" style="color: #45f2f8; font-size: 18px">76%</span>
               ）
             </span>
           </div>
@@ -194,7 +194,7 @@ export default defineComponent({
         color: #acb4ba;
       }
       .desc {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 30px;
         font-weight: 400;
         color: #ffffff;

@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-11 10:17:18
+ * @LastEditTime: 2021-06-11 12:13:02
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jgztw-left.vue
 -->
 
@@ -135,15 +135,15 @@ export default defineComponent({
     const objects = [
       {
         name: '总人数',
-        num: 13548,
+        num: 13545,
       },
       {
-        name: '村主职干部',
-        num: 1218,
+        name: '村书记',
+        num: 1280,
       },
       {
         name: '村干部',
-        num: 3245,
+        num: 11785,
       },
     ]
     const pieRef = ref<HTMLDivElement>()

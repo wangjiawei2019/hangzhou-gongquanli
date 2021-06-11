@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-06-07 10:41:45
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 19:23:18
+ * @LastEditTime: 2021-06-11 12:16:29
  * @FilePath: /hangzhou-gongquanli/src/components/section/section-detail/jdydt-right.vue
 -->
 
@@ -28,7 +28,7 @@
       <div class="jdydt-right-2-content">
         <p class="total">
           投诉总量
-          <span class="pangmen">43233</span>
+          <span class="pangmen">43234</span>
         </p>
         <div class="item">
           <div class="color"></div>

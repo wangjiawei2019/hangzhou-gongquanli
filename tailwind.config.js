@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-01-16 21:20:47
  * @LastEditors: wangjiawei
- * @LastEditTime: 2021-06-09 19:18:04
+ * @LastEditTime: 2021-06-11 17:36:34
  * @FilePath: /hangzhou-gongquanli/tailwind.config.js
  */
 
@@ -39,8 +39,9 @@ module.exports = {
         map: "url('@/assets/images/map.png')",
         bg: "url('@/assets/images/bg.png')",
         'sign-col': "url('@/assets/images/sign-col.png')",
-        'lianluozhan': "url('@/assets/images/lianluozhan.png')",
-        'lianluoyuan': "url('@/assets/images/lianluoyuan.png')",
+        lianluozhan: "url('@/assets/images/lianluozhan.png')",
+        lianluoyuan: "url('@/assets/images/lianluoyuan.png')",
+        'zuanshi-bg': "url('@/assets/images/zuanshi_n.png')",
       },
       backgroundSize: {
         auto: 'auto',
